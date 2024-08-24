@@ -1,0 +1,20 @@
+ALGORITHM date_verification
+VAR
+    day: INTEGER
+    month: INTEGER
+    year: INTEGER
+    date_today: INTEGER
+BEGIN
+    write(give the day today)
+    read(day)
+    write(give the month today)
+    read(month)
+    write(give the year today)
+    read(year)
+
+    IF (day, month, year === date_today) THEN
+        print(day : day)
+        print(month : month)
+        print(year : year)
+    END_IF
+END

@@ -53,6 +53,8 @@ console.log(multi())*/
  * Une date est donnée sous la forme d’un entier de 6 chiffres. Par exemple, le nombre 181019 représente le 18 octobre 2019. Développer un algorithme qui a un tel nombre en entrée, vérifie que ce numéro correspond à une date valide et affiche le résultat suivant : Jour : 18 Mois : Octobre Année : 2019
  */
 
+
+
 const r1= 0.7
 const r2 = 0.4
 const r3 = 0.2
@@ -101,3 +103,38 @@ if(cost_by_km < cost_by_day){
 }else{
     console.log('better choice is rental by day. And the cost is', cost_by_day)
 }
+
+
+/**
+ * Une date est donnée sous la forme d'un nombre entier 
+de 6 chiffres. Par exemple, le nombre 181019 représente le 18 octobre 2019.
+Développer un algorithme qui a un tel numéro en entrée, vérifie que 
+ce numéro correspond à une date valide
+et affiche le résultat suivant :
+
+Jour : 18
+Mois : octobre
+Année : 2019
+ */
+
+function date_verification(){
+    const date_today = 181019
+    let date
+    const day = (prompt('give me the day today: '))
+    console.log(day)
+    const month = (prompt('give me the month today: '))
+    console.log(month)
+    const year = (prompt('give me the year today: '))
+    console.log(year)
+    date = day + month + year
+    console.log(date)
+
+    if(date == date_today){
+        console.log(`Jour : ${day}`)
+        console.log(`mois : ${month}`)
+                console.log(`year : ${year}`)
+    }else{
+        console.log('date is not valid')
+    }
+}
+date_verification()
