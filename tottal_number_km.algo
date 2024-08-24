@@ -1,0 +1,51 @@
+ALGORITHM total_number_km_ndl
+VAR
+    r1: INTEGER
+    r2: INTEGER
+    r3: INTEGER
+    p_d: INTEGER
+    ins_r1: FLOAT
+    ins_r2: FLOAT
+    ins_r3: FLOAT
+    ins_p_d: FLOAT
+    TVA: FLOAT
+    total_number_km_ndl
+BEGIN
+    read(r1)
+    read(r2)
+    read(r3)
+    read(p_d)
+    read(ins_r1)
+    read(ins_r2)
+    read(ins_r3)
+    read(ins_p_d)
+    read(TVA)
+    r1:= 1000
+    r2:= r1 + 1000
+    r3:= r2 + 1000
+    p_d:= r3
+    WHILE (total_number_km_ndl := r1 + r2 + r3 + p_d) DO
+        SWITCH (total_number_km_ndl) DO
+            case r1 < r2: r1 + ins_r1 + TVA
+            case r2 < r3 : r2 + ins_r2 + TVA
+            case r3 > r2 & r1 : r3 + ins_r3 + TVA
+        END_SWITCH
+    END_WHILE
+    
+
+END
+
+/*
+r1 = 100 km tarif par kilometre ==> 
+     1km ==> 55
+r2 = 100-1000 km tarif par kilometre
+r3 = 1000+ km tarif r3 pa kilometre
+
+p_d = km illimite au prix par jour
+
+ins = assurance cout par jour/ r1 = 0,7 r2 = 0,4 r3 = 0,2 p_d = 100 pouces = 0,3
+
+TVA sur chaque = 0,18
+
+
+*/
