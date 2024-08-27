@@ -54,7 +54,7 @@ console.log(multi())*/
  */
 
 
-
+/*
 const r1= 0.7
 const r2 = 0.4
 const r3 = 0.2
@@ -117,6 +117,7 @@ Mois : octobre
 Année : 2019
  */
 
+/*
 function date_verification(){
     const date_today = 181019
     let date
@@ -138,3 +139,41 @@ function date_verification(){
     }
 }
 date_verification()
+*/
+
+let table = [5, 15, 30, 45, 1]
+
+/*function insertionSort(array) {
+    for(let i = 1; i < array.length; i++) {
+            let key = array[i];
+            console.log(key)
+            let j = i - 1;
+            console.log(j)
+            while (j >= 0 && array[j] > key) {
+                    array[j + 1] = array[j];
+                    console.log(array[j + 1])
+                    j = j - 1;
+                    console.log(j)
+            }
+            array[j + 1] = key;
+            console.log(array[j + 1])
+    }
+    return array;
+}
+console.log(insertionSort(table))*/
+
+for(let i = 1; i < table.length; i++) {
+    let key = table[i];
+    console.log(key)
+    let j = i - 1;
+    console.log(j)
+    while (j >= 0 && table[j] > key) {
+            table[j + 1] = table[j];
+            console.log(table[j + 1])
+            j = j - 1;
+            console.log(j)
+    }
+    table[j + 1] = key;
+    console.log(table[j + 1])
+}
+console.log(table);
